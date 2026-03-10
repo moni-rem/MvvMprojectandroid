@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Fixed typo: TaskAdaper -> TaskAdapter
         adapter = TaskAdapter(
             tasks = listOf(),
             onToggle = { task -> viewModel.toggleComplete(task) },
