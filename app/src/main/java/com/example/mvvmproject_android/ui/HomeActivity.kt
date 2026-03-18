@@ -24,9 +24,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, TaskListActivity::class.java))
         }
 
-        binding.btnBack.setOnClickListener {
-            finish()
-        }
+
 
         setupBottomNavigation()
     }
@@ -34,17 +32,14 @@ class HomeActivity : AppCompatActivity() {
     private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_home -> {
-                    // Already on Home
-                    true
-                }
+                R.id.nav_home -> true
                 R.id.nav_tasks -> {
                     startActivity(Intent(this, TaskListActivity::class.java))
-                    true
+                    false // Don't highlight "Tasks" on the Home screen
                 }
                 R.id.nav_profile -> {
                     Toast.makeText(this, "Profile coming soon!", Toast.LENGTH_SHORT).show()
-                    true
+                    false
                 }
                 else -> false
             }
