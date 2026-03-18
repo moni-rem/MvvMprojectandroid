@@ -9,7 +9,7 @@ import com.example.mvvmproject_android.databinding.ActivityMainBinding
 import com.example.mvvmproject_android.ui.adapter.TaskAdapter
 import com.example.mvvmproject_android.viewmodel.TaskViewModel
 
-class MainActivity : AppCompatActivity() {
+class TaskListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel: TaskViewModel by viewModels()
@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnBackMain.setOnClickListener {
+            finish()
+        }
 
         adapter = TaskAdapter(
             tasks = listOf(),

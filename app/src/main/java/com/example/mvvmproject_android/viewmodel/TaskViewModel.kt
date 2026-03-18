@@ -8,7 +8,7 @@ import com.example.mvvmproject_android.model.TaskRepository
 
 class TaskViewModel : ViewModel() {
 
-    private val repository = TaskRepository()
+    private val repository = TaskRepository.getInstance()
 
     private val _tasks = MutableLiveData<List<Task>>()
     val tasks: LiveData<List<Task>> = _tasks
@@ -23,6 +23,11 @@ class TaskViewModel : ViewModel() {
 
     fun addTask(title: String) {
         repository.addTask(title)
+        loadTasks()
+    }
+
+    fun updateTask(id: Int, newTitle: String) {
+        repository.updateTask(id, newTitle)
         loadTasks()
     }
 
