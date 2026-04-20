@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                     putExtra("TASK_TITLE", task.title)
                 }
                 startActivity(intent)
-            },
+             },
             onBack = {
                 finish()
             }

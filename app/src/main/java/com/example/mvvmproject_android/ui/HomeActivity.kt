@@ -2,9 +2,7 @@ package com.example.mvvmproject_android.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mvvmproject_android.R
 import com.example.mvvmproject_android.databinding.HomePageBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -22,27 +20,6 @@ class HomeActivity : AppCompatActivity() {
 
         binding.btnViewTask.setOnClickListener {
             startActivity(Intent(this, TaskListActivity::class.java))
-        }
-
-
-
-        setupBottomNavigation()
-    }
-
-    private fun setupBottomNavigation() {
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> true
-                R.id.nav_tasks -> {
-                    startActivity(Intent(this, TaskListActivity::class.java))
-                    false // Don't highlight "Tasks" on the Home screen
-                }
-                R.id.nav_profile -> {
-                    Toast.makeText(this, "Profile coming soon!", Toast.LENGTH_SHORT).show()
-                    false
-                }
-                else -> false
-            }
         }
     }
 }

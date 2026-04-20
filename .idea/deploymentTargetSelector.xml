@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-03-18T04:32:56.972486400Z">
+        <DropdownSelection timestamp="2026-04-05T01:59:00.868018700Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="PhysicalDevice" identifier="serial=a814feab" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\remph\.android\avd\Pixel_7.avd" />
             </handle>
           </Target>
         </DropdownSelection>
@@ -15,10 +15,10 @@
       </SelectionState>
       <SelectionState runConfigName="HomeActivity">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-03-18T04:24:01.573579600Z">
+        <DropdownSelection timestamp="2026-04-05T01:27:23.007931900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\remph\.android\avd\Medium_Phone.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\remph\.android\avd\Pixel_5.avd" />
             </handle>
           </Target>
         </DropdownSelection>

@@ -12,15 +12,12 @@ class AddTaskActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddTaskBinding
     private val viewModel: TaskViewModel by viewModels()
     private var taskId: Int = -1
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         taskId = intent.getIntExtra("TASK_ID", -1)
         val taskTitle = intent.getStringExtra("TASK_TITLE")
-
         if (taskId != -1) {
             binding.etTitle.setText(taskTitle)
             binding.tvHeader.text = "Update Task"
@@ -33,11 +30,9 @@ class AddTaskActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
         binding.btnCancel.setOnClickListener {
             finish()
         }
-
         binding.btnSave.setOnClickListener {
             val title = binding.etTitle.text.toString()
             if (title.isNotBlank()) {
